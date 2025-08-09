@@ -1,0 +1,29 @@
+{
+  "tree": "CARGODSR-deploy/\n  - README.md\n  backend/\n    - package.json\n    - .env.example\n    - server.js\n    - Dockerfile\n    migrations/\n      - 001_create_users_and_sales.sql\n      - run_migrations.js\n      - seed_demo.js\n    src/\n      - db.js\n      - auth.js\n      - users.js\n      - reports.js\n      - exports.js\n  frontend/\n    - package.json\n    - Dockerfile\n    src/\n      - index.html\n      - main.ts\n      - polyfills.ts\n      - styles.css\n      app/\n        - app.module.ts\n        - auth.interceptor.ts\n        - auth.service.ts\n        - login.component.ts\n        - app.component.ts\n        - data.service.ts\n        components/\n          - summary.component.ts\n          - detailed.component.ts\n          - customer.component.ts\n  infra/\n    - docker-compose.yml",
+  "found_files": {
+    "package.json": [
+      "backend/package.json",
+      "frontend/package.json"
+    ],
+    "requirements.txt": [],
+    "pyproject.toml": [],
+    "Procfile": [],
+    "Dockerfile": [
+      "backend/Dockerfile",
+      "frontend/Dockerfile"
+    ],
+    "README.md": [
+      "README.md"
+    ],
+    ".env.example": [
+      "backend/.env.example"
+    ],
+    "server": [
+      "backend"
+    ],
+    "frontend": [
+      "frontend"
+    ]
+  },
+  "extract_dir": "/mnt/data/CARGODSR-deploy"
+}

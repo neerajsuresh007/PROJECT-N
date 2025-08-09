@@ -1,0 +1,9 @@
+{
+  "name": "cargodsr-monorepo-deploy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node backend/server.js",
+    "postinstall": "cd frontend && npm install && npm run build && cd ../backend && npm install"
+  }
+}
