@@ -1,0 +1,31 @@
+
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: nutraacs
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: nutraacsdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  backend:
+    build: ../backend
+    env_file:
+      - ../backend/.env.example
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    volumes:
+      - ../backend:/app
+  frontend:
+    build: ../frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+volumes:
+  pgdata:
